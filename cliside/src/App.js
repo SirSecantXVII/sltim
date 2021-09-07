@@ -11,6 +11,10 @@ import UdContext from './usercontext/usercontext.js'
 import  React,{ useContext, useEffect, useState } from "react";
 function App() {
   const [urdata,setUser] = useState({user:null , redirect:false}) // default user info // urdata and setuser from use state are the parametersthat u can use in these routes
+  var data = localStorage.getItem('ud');
+  if (data){
+    setUser(data)
+  }
   return (
     <div className="App">
       <Router>  
